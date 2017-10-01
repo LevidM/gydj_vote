@@ -3,40 +3,88 @@
 </view>
 <view class="container">
   <view class="conut">
-    <text class="right_line">候选企业\n24</text>
-    <text class="right_line">候选工业家\n12</text>
-    <text>投票人次\n88888</text>
+    <text class="conut_in right_line">候选企业\n24</text>
+    <text class="conut_in right_line">候选工业家\n12</text>
+    <text class="conut_in">投票人次\n88888</text>
   </view>
 
   <view>
-    <text class="title">投票规则</text>
-    <text>1. 关注“深圳工业总会”官方微信公众号后方可投票。</text>
-    <text>2. 每个微信号每天可投1票，每票需同时选择企业和工业家各不少于3个。</text>
+    <view class="center"><text class="title">投票规则</text></view>
+    <text class="rule">1. 关注“深圳工业总会”官方微信公众号后方可投票。\n</text>
+    <text class="rule">2. 每个微信号每天可投1票，每票需同时选择企业和工业家各不少于3个。</text>
   </view>
 
   <view>
-    <view><text class="title">候选企业</text></view>
+    <view class="center"><text class="title">候选企业</text></view>
     
-    <view>
+    <view class="logo">
+
+      <block wx:for="{{logo_key}}">
+      <view class="logo_row">
+        <view class="logo_container">
+          <image src="{{item.logo_img_l}}"></image>
+          <view class="center">{{item.logo_title_l}}</view>
+          <view class="center">{{item.logo_poll_l}}</view>
+          <label class="center select"><checkbox value="{{item.logo_num_l}}" checked="选择"/>选择</label>
+        </view>
+        <view class="logo_container">
+          <image src="{{item.logo_img_r}}"></image>
+          <view class="center">{{item.logo_title_r}}</view>
+          <view class="center">{{item.logo_poll_r}}</view>
+          <label class="center select"><checkbox value="{{item.logo_num_r}}" checked="选择"/>选择</label>
+        </view>
+      </view>
+      </block>
+
     </view>
   </view>
 
   <view>
-    <text class="title">候选工业家</text>
-    <view>
-    </view>
-  </view>
+    <view class="center"><text class="title">候选工业家</text></view>
 
-  <view>
-    <text class="title">确认投票</text>
-    <view>
+    <view class="man">
+
+      <block wx:for="{{man_key}}">
+      <view class="man_row">
+        <view class="man_container">
+          <view class="center"><image src="{{item.man_img_l}}"></image></view>
+          <view class="name center">{{item.man_name_l}}</view>
+          <view class="center">{{item.man_title_l}}</view>
+          <view class="center">{{item.man_poll_l}}</view>
+          <view class="center"><checkbox value="{{item.man_num_l}}" checked="选择"/></view>
+        </view>
+        <view class="man_container">
+          <view class="center"><image src="{{item.man_img_r}}"></image></view>
+          <view class="name center">{{item.man_name_r}}</view>
+          <view class="center">{{item.man_title_r}}</view>
+          <view class="center">{{item.man_poll_r}}</view>
+          <view class="center"><checkbox value="{{item.man_num_r}}" checked="选择"/></view>
+        </view>
+      </view>
+    </block>
+      
     </view>
-    <button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+
+  </view> 
+
+  <view class="submit">
+    <button type="warn" bindtap="listenerButton" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
           disabled="{{disabled}}">提交投票</button>
   </view>
+<!--弹出框-->
+<modal 
+    title="投票成功"
+     hidden="{{hiddenModal}}"
+     confirm-text="确定"
+     no-cancel="true"
+      bindconfirm="listenerConfirm"
+ >
+     您已成功投票！
+     </modal>
 </view>
 
+
 <view>
-  <view class="weui-footer__text">主办:深圳工业总会   深圳商报</view>
+  <view class="footer">主办:深圳工业总会   深圳商报</view>
   <text class="footer">Copyright © 2017 深圳工业总会</text>
 </view>

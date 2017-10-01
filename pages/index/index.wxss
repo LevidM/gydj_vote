@@ -1,6 +1,6 @@
 .container{
   
-  margin: 30rpx;
+  margin: 20rpx;
 }
 
 .banner{
@@ -8,11 +8,11 @@
 }
 
 .title{
-  align-items: center;
-  padding: 10px;
+  padding: 6px 10px;
   border: 1px solid #e64340;
   border-radius: 5px;
   color: #e64340;
+  margin: 1.5em 0 1em 0;
 }
 
 .footer{
@@ -23,4 +23,89 @@
   color: #999;
   font-size: 12px;
   margin: 1em;
+}
+
+
+.conut{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+.conut_in{
+  width:235rpx;
+  text-align: center;
+  color: #999;
+  line-height: 2em;
+  font-size:14px;
+}
+
+.right_line{
+  border-right: 1px solid #ccc;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.rule{
+  font-size: 15px;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+  color: #666;
+}
+
+.logo, .man{
+  display: flex;
+  flex-direction: column;
+}
+
+.logo_row, .man_row{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo_container,.man_container{
+  width: 335rpx;
+  margin: 0 10rpx 1em 10rpx;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.logo_container image{
+  width: 345rpx;
+  height: 210rpx;
+}
+
+.man_container image{
+  width:230rpx;
+  height: 230rpx;
+  margin-bottom: 10rpx;
+}
+
+.name{
+  font-weight: bold;
+}
+
+.submit{
+  margin:2em 0;
+}
+
+/* .select{
+  padding:3px 10px;
+  border:1px solid #999;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.select::selection{
+  background-color: #e64340;
+} */
+
+checkbox{
+  border: 0px solid #fff;
 }
