@@ -12,7 +12,7 @@
   border: 1px solid #e64340;
   border-radius: 5px;
   color: #e64340;
-  margin: 1.5em 0 1em 0;
+  margin: 1.5em 0 0.5em 0;
 }
 
 .footer{
@@ -76,6 +76,10 @@
   line-height: 1.5em;
 }
 
+.logo_container view,.man_container view{
+  margin-bottom: 0.5em;
+}
+
 .logo_container image{
   width: 345rpx;
   height: 210rpx;
@@ -95,17 +99,10 @@
   margin:2em 0;
 }
 
-/* .select{
-  padding:3px 10px;
-  border:1px solid #999;
-  background-color: #fff;
-  border-radius: 5px;
-}
 
-.select::selection{
-  background-color: #e64340;
-} */
 
-checkbox{
-  border: 0px solid #fff;
+.span{
+  font-size: 14px;
+  color:#aaa;
+  margin-bottom: 1em;
 }

@@ -16,7 +16,8 @@
 
   <view>
     <view class="center"><text class="title">候选企业</text></view>
-    
+    <view class="center span">按企业商号音序排列</view>
+
     <view class="logo">
 
       <block wx:for="{{logo_key}}">
@@ -25,13 +26,13 @@
           <image src="{{item.logo_img_l}}"></image>
           <view class="center">{{item.logo_title_l}}</view>
           <view class="center">{{item.logo_poll_l}}</view>
-          <label class="center select"><checkbox value="{{item.logo_num_l}}" checked="选择"/>选择</label>
+          <label class="center select"><checkbox value="{{item.logo_num_l}}" checked=""/>选择</label>
         </view>
         <view class="logo_container">
           <image src="{{item.logo_img_r}}"></image>
           <view class="center">{{item.logo_title_r}}</view>
           <view class="center">{{item.logo_poll_r}}</view>
-          <label class="center select"><checkbox value="{{item.logo_num_r}}" checked="选择"/>选择</label>
+          <label class="center select"><checkbox value="{{item.logo_num_r}}" checked=""/>选择</label>
         </view>
       </view>
       </block>
@@ -41,6 +42,7 @@
 
   <view>
     <view class="center"><text class="title">候选工业家</text></view>
+    <view class="center span">按姓氏笔画排列</view>
 
     <view class="man">
 
@@ -51,14 +53,14 @@
           <view class="name center">{{item.man_name_l}}</view>
           <view class="center">{{item.man_title_l}}</view>
           <view class="center">{{item.man_poll_l}}</view>
-          <view class="center"><checkbox value="{{item.man_num_l}}" checked="选择"/></view>
+          <label class="center"><checkbox value="{{item.man_num_l}}" checked=""/>选择</label>
         </view>
         <view class="man_container">
           <view class="center"><image src="{{item.man_img_r}}"></image></view>
           <view class="name center">{{item.man_name_r}}</view>
           <view class="center">{{item.man_title_r}}</view>
           <view class="center">{{item.man_poll_r}}</view>
-          <view class="center"><checkbox value="{{item.man_num_r}}" checked="选择"/></view>
+          <label class="center"><checkbox value="{{item.man_num_r}}" checked=""/>选择</label>
         </view>
       </view>
     </block>
